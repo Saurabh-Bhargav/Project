@@ -18,7 +18,6 @@ This project aims to ensure network continuity and seamless operation in the eve
 
 1. Clone this repository to your local machine.
 2. Refer to the documentation in the `Documentation/` folder for detailed setup instructions.
-3. Use the provided scripts in the `Scripts/` folder to simulate failover scenarios and ensure the HA cluster functions as expected.
 
 ## Additional Resources
 
@@ -26,7 +25,7 @@ This project aims to ensure network continuity and seamless operation in the eve
 
 ## Contact Information
 
-- Email: [saurabhbhargavofficial@gmail.com]
+- Email: [Saurabh_Bhargav](saurabhbhargavofficial@gmail.com)
 - LinkedIn: [Saurabh-bhargav](https://www.linkedin.com/in/saurabh-bhargav/)
 
 
