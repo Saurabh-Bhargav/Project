@@ -19,7 +19,7 @@ This project aims to ensure network continuity and seamless operation in the eve
 ## Usage Instructions
 
 1. Clone this repository to your local machine.
-2. Refer to the documentation in the `Documentation/` folder for detailed setup instructions.
+2. Refer to the documentation in the `Documentations/` folder for detailed setup instructions.
 
 ## Additional Resources
 
