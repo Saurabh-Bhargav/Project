@@ -69,9 +69,8 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 
 ### Step 4: Testing and Failover
 
-1. Use the provided `failover-test.sh` script to simulate a failover scenario:
+1. 
 
-   
    - ![Screenshot 2023-09-07 091217](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/b6c470dd-c0a7-4b3b-80ca-40bbcd7fe503)
      
 
