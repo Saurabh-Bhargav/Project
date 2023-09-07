@@ -6,7 +6,7 @@ This documentation outlines the implementation of a high availability pfSense cl
 
 ## Network 
 
-![pfsenseHA878](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/bbfe1809-71df-4632-bac1-082e8c12db42)
+![pfsenseHA2](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/bf1c6cae-fe9c-4bd7-87dd-807b9282d605)
 
 
 
