@@ -96,4 +96,4 @@ In case of issues, refer to the following general troubleshooting tips:
 
 For someone new to cluster setups, it's essential to note that in order for high availability to work, the client machine should be configured to use the CARP IP (192.168.1.100) as its gateway, just like you would in a Windows Server cluster. By following the steps outlined here, you have ensured network continuity and resilience in case of a pfSense firewall failure.
 
-For further assistance or inquiries, please feel free to contact the project owner at [YourEmail@example.com](saurabhbhargavofficial.gmail.com) or via [LinkedIn](https://www.linkedin.com/in/Saurabh-Bhargav/).
+For further assistance or inquiries, please feel free to contact the project owner at [SaurabhBhargav@gmail.com](saurabhbhargavofficial.gmail.com) or via [LinkedIn](https://www.linkedin.com/in/Saurabh-Bhargav/).
