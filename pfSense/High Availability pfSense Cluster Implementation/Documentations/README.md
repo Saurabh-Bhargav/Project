@@ -5,9 +5,9 @@
 This documentation outlines the implementation of a high availability pfSense cluster to ensure network continuity and resilience. The project consists of two pfSense virtual machines (VMs) in an active-passive configuration, with a CARP IP address for seamless failover.
 
 ## Network 
-![pfsenseHA878](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/582f6f65-f733-409e-b410-918a4b9dfdd2)
 
-Diagram
+![pfsenseHA878](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/bbfe1809-71df-4632-bac1-082e8c12db42)
+
 
 
 
