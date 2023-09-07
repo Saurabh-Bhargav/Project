@@ -27,15 +27,16 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 ### Step 1: Configure Virtual Machines
 
 1. **Primary pfSense VM (192.168.1.10)**:
-2. 
+   
    - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/878a5bb8-cd76-4572-b72a-6572303e17f4)
 
 
    - ![Screenshot 2023-09-07 085831](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/11e9cfeb-e5b0-4ee6-8a8e-02f078fd0261)
 
 
-3. **Backup pfSense VM (192.168.1.20)**:
-4. 
+2. **Backup pfSense VM (192.168.1.20)**:
+   
+ 
    - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/54dd5f05-5e24-4d1f-a8a5-99e833436e02)
   
    - 
