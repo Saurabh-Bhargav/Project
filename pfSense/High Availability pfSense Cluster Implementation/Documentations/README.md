@@ -27,35 +27,52 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 ### Step 1: Configure Virtual Machines
 
 1. **Primary pfSense VM (192.168.1.10)**:
-   - [![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/878a5bb8-cd76-4572-b72a-6572303e17f4)
-]
-   - [![Screenshot 2023-09-07 085831](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/11e9cfeb-e5b0-4ee6-8a8e-02f078fd0261)
-]
+2. 
+   - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/878a5bb8-cd76-4572-b72a-6572303e17f4)
 
-2. **Backup pfSense VM (192.168.1.20)**:
-   - [![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/54dd5f05-5e24-4d1f-a8a5-99e833436e02)]
 
-   - [![Screenshot 2023-09-07 085846](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/53b9e2c3-367c-406d-bcce-3092e2952a47)
-]
+   - ![Screenshot 2023-09-07 085831](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/11e9cfeb-e5b0-4ee6-8a8e-02f078fd0261)
+
+
+3. **Backup pfSense VM (192.168.1.20)**:
+4. 
+   - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/54dd5f05-5e24-4d1f-a8a5-99e833436e02)
+  
+   - 
+
+   - ![Screenshot 2023-09-07 085846](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/53b9e2c3-367c-406d-bcce-3092e2952a47)
+
+
 
 ### Step 2: CARP Configuration
 
 1. Configure CARP settings on both pfSense VMs:
-   - [![Screenshot 2023-09-07 090651](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/2d10b47b-cfd1-419e-a02f-d93087eb448c)]
+
+
+   - ![Screenshot 2023-09-07 090651](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/2d10b47b-cfd1-419e-a02f-d93087eb448c)
+  
+     
 
 ### Step 3: Client VM Setup
 
 1. Configure the client VM (192.168.1.50) to use the CARP IP (192.168.1.100) as the gateway:
-   - [![Screenshot 2023-09-07 090854](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/eca11fc1-a7e4-45f2-b8cd-45cae509a597)
-]
-   - [![Screenshot 2023-09-07 092742](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/db6acc40-58ee-4a72-bbaa-39f989136bcf)
-]
+
+   
+   - ![Screenshot 2023-09-07 090854](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/eca11fc1-a7e4-45f2-b8cd-45cae509a597)
+     
+
+   - ![Screenshot 2023-09-07 092742](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/db6acc40-58ee-4a72-bbaa-39f989136bcf)
+
+
 
 ### Step 4: Testing and Failover
 
 1. Use the provided `failover-test.sh` script to simulate a failover scenario:
-   - [![Screenshot 2023-09-07 091217](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/b6c470dd-c0a7-4b3b-80ca-40bbcd7fe503)
-]
+
+   
+   - ![Screenshot 2023-09-07 091217](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/b6c470dd-c0a7-4b3b-80ca-40bbcd7fe503)
+     
+
    - I turned off the MASTER Firewall(192.168.1.10) but my internet on my client VM was working fine. Also the i was able to login in 192.168.1.100.
 
 ## Troubleshooting
