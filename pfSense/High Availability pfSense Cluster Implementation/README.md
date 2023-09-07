@@ -14,10 +14,7 @@ This project aims to ensure network continuity and seamless operation in the eve
 
 - **Client VM** (192.168.1.50): An Ubuntu 20.04.3 LTS virtual machine used to interact with the pfSense cluster.
   
-![pfsenseHA drawio](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/8a7614cf-0d76-4e59-b139-c21bd1039710)
-
-
-     
+    
 
 ## Usage Instructions
 
