@@ -5,9 +5,8 @@
 This documentation outlines the implementation of a high availability pfSense cluster to ensure network continuity and resilience. The project consists of two pfSense virtual machines (VMs) in an active-passive configuration, with a CARP IP address for seamless failover.
 
 ## Network 
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20100422.png
 
-
-![Screenshot 2023-09-07 100422](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/cb12a07a-88ad-4844-9e17-2d96ed70fcc6)
 
 
 
@@ -29,29 +28,32 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 
 1. **Primary pfSense VM (192.168.1.10)**:
    
-   - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/878a5bb8-cd76-4572-b72a-6572303e17f4)
+ https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png
 
 
-   - ![Screenshot 2023-09-07 085831](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/11e9cfeb-e5b0-4ee6-8a8e-02f078fd0261)
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085846.png
 
 
 2. **Backup pfSense VM (192.168.1.20)**:
    
- 
-   - ![Screenshot 2023-09-07 092720](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/54dd5f05-5e24-4d1f-a8a5-99e833436e02)
-  
-     
-
-   - ![Screenshot 2023-09-07 085846](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/53b9e2c3-367c-406d-bcce-3092e2952a47)
+ https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png
 
 
-
-### Step 2: CARP Configuration
-
-1. Configure CARP settings on both pfSense VMs:
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085931.png
 
 
-   - ![Screenshot 2023-09-07 090651](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/2d10b47b-cfd1-419e-a02f-d93087eb448c)
+### Step 2: HA & CARP Configuration
+
+1. Configure the High Availability settings firewall and sync it with backup firewall.
+   
+   Go to System > High Availability
+   
+   Make sure you test that changes you making in master are being reflected on backup immediately.
+   
+
+2. Configure CARP settings on both pfSense VMs:
+
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090651.png
   
      
 
@@ -59,22 +61,21 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 
 1. Configure the client VM (192.168.1.50) to use the CARP IP (192.168.1.100) as the gateway:
 
+   https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092742.png
+
    
-   - ![Screenshot 2023-09-07 090854](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/eca11fc1-a7e4-45f2-b8cd-45cae509a597)
-     
-
-   - ![Screenshot 2023-09-07 092742](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/db6acc40-58ee-4a72-bbaa-39f989136bcf)
-
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090854.png
 
 
 ### Step 4: Testing and Failover
 
 1. 
-
-   - ![Screenshot 2023-09-07 091217](https://github.com/Saurabh-Bhargav/Projects/assets/143943258/b6c470dd-c0a7-4b3b-80ca-40bbcd7fe503)
+https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20091217.png
      
 
    - I turned off the MASTER Firewall(192.168.1.10) but my internet on my client VM was working fine. Also the i was able to login in 192.168.1.100.
+
+
 
 ## Troubleshooting
 
