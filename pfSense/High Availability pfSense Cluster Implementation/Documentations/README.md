@@ -28,18 +28,18 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
 
 1. **Primary pfSense VM (192.168.1.10)**:
    
- https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png
+ ![Primary pfsense VM Configuration](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png)
 
 
-https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085846.png
+![Primary pfsense Network Settings](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085846.png)
 
 
 2. **Backup pfSense VM (192.168.1.20)**:
    
- https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png
+ ![Backup pfsense VM Configuration](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092720.png)
 
 
-https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085931.png
+![Backup pfsense Network Settings](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20085931.png)
 
 
 ### Step 2: HA & CARP Configuration
@@ -53,7 +53,7 @@ https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availabilit
 
 2. Configure CARP settings on both pfSense VMs:
 
-https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090651.png
+![CARP Settings](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090651.png)
   
      
 
@@ -61,16 +61,16 @@ https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availabilit
 
 1. Configure the client VM (192.168.1.50) to use the CARP IP (192.168.1.100) as the gateway:
 
-   https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092742.png
+   ![Client VM Details](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20092742.png)
 
    
-https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090854.png
+![Client VM Network Settings](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20090854.png)
 
 
 ### Step 4: Testing and Failover
 
 1. 
-https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20091217.png
+![Testing by turning off one pfsense](https://github.com/Saurabh-Bhargav/Projects/blob/main/pfSense/High%20Availability%20pfSense%20Cluster%20Implementation/Images/Screenshot%202023-09-07%20091217.png)
      
 
    - I turned off the MASTER Firewall(192.168.1.10) but my internet on my client VM was working fine. Also the i was able to login in 192.168.1.100.
