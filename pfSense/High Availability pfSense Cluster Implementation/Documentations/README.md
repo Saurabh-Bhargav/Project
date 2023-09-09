@@ -48,7 +48,8 @@ VMware Workstation 17 Player - You can use other virtualization softwares also a
    
    Go to System > High Availability
    
-   Make sure you test that changes you making in master are being reflected on backup immediately.
+   Make sure you test that changes you making in master are being reflected on backup immediately. Make sure you turn on sync in both machines.
+
    
 
 2. Configure CARP settings on both pfSense VMs:
