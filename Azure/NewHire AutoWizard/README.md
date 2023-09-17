@@ -46,5 +46,5 @@ Use the Azure AD connector in Logic Apps to automatically create a new user in A
 - Access Logic App run history for troubleshooting.
 
 ## LinkedIn
-Connect with me on [Saurabh Bhargav](www.linkedin.com/in/saurabh-bhargav) for further details and collaboration.
+Connect with me on LinkedIn: [Saurabh-bhargav](https://www.linkedin.com/in/saurabh-bhargav/)  for further details and collaboration.
 
