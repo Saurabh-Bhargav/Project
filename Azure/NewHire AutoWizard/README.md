@@ -14,8 +14,13 @@ The NewHire AutoWizard automates the onboarding of new employees into Azure Acti
 - Create an Azure account.
 - Design a Logic App workflow triggered by an event (e.g., SharePoint list entry or specific mailbox email) indicating a new employee hire.
 
-### 2. Azure AD User Creation
-- Use the Azure AD connector in Logic Apps to automatically create a new user in Azure AD based on trigger event details.
+### 2. Azure Logic App step up and User creation
+
+Step 1: Receive HTTP Request in Logic App
+Begin by setting up a step to receive an HTTP request. This serves as the trigger for the onboarding process.
+
+Step 2: Create Azure AD User
+Use the Azure AD connector in Logic Apps to automatically create a new user in Azure AD based on trigger event details.
 
 ### 3. Role and Group Assignment
 - Assign predefined roles and groups to the new user based on job positions or departments indicated in the trigger.
