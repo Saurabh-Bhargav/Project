@@ -26,7 +26,6 @@ This project aims to ensure network continuity and seamless operation in the eve
 
 ## Contact Information
 
-- Email: [Saurabh_Bhargav](saurabhbhargavofficial@gmail.com)
 - LinkedIn: [Saurabh-bhargav](https://www.linkedin.com/in/saurabh-bhargav/)
 
 
