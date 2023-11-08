@@ -17,9 +17,7 @@ In this lab, you will:
 
 ## Architecture diagram
 
-
-![Screenshot 2023-11-08 152254](https://github.com/Saurabh-Bhargav/Project/assets/143943258/79c4a36b-fbde-4f81-bf3d-c98e1e3db451)
-
+![Screenshot 2023-11-08 152254](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Screenshot%202023-11-08%20152254.png)
 
 ### Instructions
 
