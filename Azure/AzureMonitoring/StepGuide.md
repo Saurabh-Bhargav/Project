@@ -363,13 +363,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 Here is a screenshot showing the logs saved in the storage account:
 
-!
+![image](https://github.com/Saurabh-Bhargav/Project/assets/143943258/c8179b59-7524-45dd-a9e3-65ea5c9c6d9c)
+
 
 
 ## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
 
 ## Review
 
