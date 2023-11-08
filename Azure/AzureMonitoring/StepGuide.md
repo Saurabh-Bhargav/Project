@@ -50,11 +50,6 @@ In this lab, you will:
 
    To enable access to Azure Monitor services, you need to register the Microsoft.Insights resource provider. You can do this using PowerShell or the Azure Portal.
 
-   - **PowerShell Method (optional)**
-     ```powershell
-     Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-     ```
-
    - **Azure Portal Method**
      - In the Azure Portal, navigate to "All services."
      - Search for "Subscriptions" and select it.
@@ -73,10 +68,6 @@ In this lab, you will:
      - In the left pane, select "Resource providers."
      - Search for "Microsoft.AlertsManagement" and click "Register" to enable it.
 
-Congratulations! You have successfully created a VM with a storage account and registered the required resource providers.
-
-
-1. Minimize Cloud Shell pane (but do not close it).
 
 ## Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
