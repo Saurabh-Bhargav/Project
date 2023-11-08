@@ -2,7 +2,8 @@
 
 ## Overview
 
-Welcome to the CloudEye project, where we explore the world of Azure Monitoring and gain a clear view into the performance and configuration of Azure resources, with a focus on Azure virtual machines. This project demonstrates expertise in Azure Monitoring and showcases various aspects of Azure Monitor and Log Analytics.
+# Project Scenario: Azure Monitoring and Log Analytics Lab
+The project aimed to assess Azure's capabilities for gaining insights into the performance and configuration of Azure resources, with a specific focus on Azure virtual machines. The primary objective was to explore and evaluate the features offered by Azure Monitor, including Log Analytics, to enhance resource monitoring and management.
 
 
 ## Objectives
@@ -25,55 +26,55 @@ In this lab, you will:
 
 ## Exercise 1
 
-## Task 1: Provision the lab environment
+## Task 1: Create VM and Storage Account
 
-In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
+1. **Login to the Azure Portal**
+   - Open a web browser and navigate to [Azure Portal](https://portal.azure.com/).
+   - Sign in with your Azure account.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+2. **Create a Storage Account**
+   - In the Azure Portal, click on "Create a resource."
+   - Search for "Storage account" and select it.
+   - Click "Create" and fill out the necessary details, including name, region, and resource group.
+   - Review and confirm your settings, then click "Create" to provision the storage account.
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+3. **Create a Virtual Machine**
+   - In the Azure Portal, click on "Create a resource."
+   - Search for "Virtual machine" and select it.
+   - Follow the wizard to configure your VM settings, including choosing the OS image, virtual network, and storage account created in the previous step.
+   - Review and confirm your settings, then click "Create" to provision the VM.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+## Task 2: Register Resource Providers
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+1. **Register Microsoft.Insights Resource Provider**
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** and **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** into the Cloud Shell home directory.
+   To enable access to Azure Monitor services, you need to register the Microsoft.Insights resource provider. You can do this using PowerShell or the Azure Portal.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+   - **PowerShell Method (optional)**
+     ```powershell
+     Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
+     ```
 
-    >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
+   - **Azure Portal Method**
+     - In the Azure Portal, navigate to "All services."
+     - Search for "Subscriptions" and select it.
+     - Choose the target subscription where you created your VM.
+     - In the left pane, select "Resource providers."
+     - Search for "Microsoft.Insights" and click "Register" to enable it.
 
-   ```powershell
-   $location = '[Azure_region]'
+2. **Register Microsoft.AlertsManagement Resource Provider**
 
-   $rgName = 'lab1'
+   To enable access to Alerts Management services, you need to register the Microsoft.AlertsManagement resource provider. You can do this using PowerShell or the Azure Portal.
 
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
+   - **Azure Portal**
+     - In the Azure Portal, navigate to "All services."
+     - Search for "Subscriptions" and select it.
+     - Choose the target subscription where you created your VM.
+     - In the left pane, select "Resource providers."
+     - Search for "Microsoft.AlertsManagement" and click "Register" to enable it.
 
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
+Congratulations! You have successfully created a VM with a storage account and registered the required resource providers.
 
-    >**Note**: You will be prompted to provide an Admin password.
-    
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/lab1-vm-template.json `
-      -TemplateParameterFile $HOME/lab1-vm-parameters.json `
-      -AsJob
-   ```
-
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
-
-## Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-
-1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-
-   ```powershell
-   Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-
-   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
-   ```
 
 1. Minimize Cloud Shell pane (but do not close it).
 
