@@ -33,10 +33,9 @@ In this lab, you will:
    - In the Azure Portal, click on "Create a resource."
    - Search for "Storage account" and select it.
    - Click "Create" and fill out the necessary details, including name, region, and resource group.
-  
      
-     ![CReate-storage-accpunt](https://github.com/Saurabh-Bhargav/Project/assets/143943258/84f2404f-1af3-449f-93d3-83e7f9b95a93)
-
+   ![CReate-storage-accpunt](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/CReate-storage-accpunt.png)
+     
 
    - Review and confirm your settings, then click "Create" to provision the storage account.
 
@@ -45,10 +44,9 @@ In this lab, you will:
    - Search for "Virtual machine" and select it.
    - Follow the wizard to configure your VM settings, including choosing the OS image, virtual network, and storage account created in the previous step.
      
+     ![Screenshot 2023-11-08 092629](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Screenshot%202023-11-08%20092629.png)
+    
      
-     ![Screenshot 2023-11-08 092629](https://github.com/Saurabh-Bhargav/Project/assets/143943258/929350dd-b1ed-4ccb-bec4-8588ca470e67)
-     
-
    - Review and confirm your settings, then click "Create" to provision the VM.
 
 ## Task 2: Register Resource Providers
@@ -57,8 +55,7 @@ In this lab, you will:
 
    To enable access to Azure Monitor services, you need to register the Microsoft.Insights resource provider. You can do this using PowerShell or the Azure Portal.
    
-
-![register-onption-in-subscription](https://github.com/Saurabh-Bhargav/Project/assets/143943258/78b7059e-528c-418e-a182-bae5b6bba555)
+![register-onption-in-subscription](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/register-onption-in-subscription.png)
 
 
    - **Azure Portal Method**
@@ -95,9 +92,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Log Analytics Workspace | any unique name |
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
    
-
-![Create-log-analysius-workspace](https://github.com/Saurabh-Bhargav/Project/assets/143943258/d9a81f5e-d619-4455-bb67-a8a4b188f16e)
-
+![Create-log-analysius-workspace](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Create-log-analysius-workspace.png)
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -122,9 +117,8 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
 1. On the Automation account blade, in the **Configuration Management** section, click **Inventory**.
    
-
-   ![Enable-inventory-inaccountautomation](https://github.com/Saurabh-Bhargav/Project/assets/143943258/aa26434e-f187-4724-b741-9b961ff70191)
-
+![Enable-inventory-inaccountautomation](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Enable-inventory-inaccountautomation.png)
+  
 
 1. In the **Inventory** pane, in the **Log Analytics workspace** drop-down list, select the Log Analytics workspace you created earlier in this task and click **Enable**.
 
@@ -135,8 +129,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
 1. On the Automation account blade, in the **Update Management** section, click **Update management** and click **Enable**.
    
-
-   ![Update-management-in-automation-acccount](https://github.com/Saurabh-Bhargav/Project/assets/143943258/7abb984a-9842-4afd-ab3c-82f97cad8bf3)
+![Update-management-in-automation-acccount](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Update-management-in-automation-acccount.png)
 
    
     >**Note**: Wait for the installation to complete. This might take about 5 minutes.
@@ -159,8 +152,7 @@ In this task, you will review default monitoring settings of Azure virtual machi
 
 1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
 
-   
-![Filter-on-metrics-before-mointor-confihuration](https://github.com/Saurabh-Bhargav/Project/assets/143943258/2073b9e1-c974-4e18-877a-1d8d4c35b5ed)
+   ![Filter-on-metrics-before-mointor-confihuration](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Filter-on-metrics-before-mointor-confihuration.png)
 
 
 ## Task 5: Configure Azure virtual machine diagnostic settings
@@ -171,16 +163,14 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Overview** tab of the **cloudeyeVM1 \| Diagnostic settings** blade, select a **Diagnostic storage account**, and then click **Enable guest-level monitoring**.
 
-   
-![Enable-Diagnosis-VM](https://github.com/Saurabh-Bhargav/Project/assets/143943258/55a5f9e4-35b8-406f-b99a-8783500eca0b)
+   ![Enable-Diagnosis-VM](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Enable-Diagnosis-VM.png)
 
 
     >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
 
 1. Switch to the **Performance counters** tab of the **CloudeyeVM1 \| Diagnostic settings** blade and review the available counters.
    
-
-![Check-performance-after-enabling-diagnosis](https://github.com/Saurabh-Bhargav/Project/assets/143943258/2f48f956-7df6-4171-9c34-cda0574ae0cc)
+![Check-performance-after-enabling-diagnosis](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Check-performance-after-enabling-diagnosis.png)
 
 
     >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom** view for more detailed listing.
@@ -192,8 +182,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **CloudeyeVM1** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
    
-   
-![Enable-Logs-in_VM](https://github.com/Saurabh-Bhargav/Project/assets/143943258/bb58f4d5-9133-406a-9719-6ea608528bac)
+   ![Enable-Logs-in_VM](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Enable-Logs-in_VM.png)
 
 
 1. On the **ClludeyeVM1 - Logs** blade, ensure **Azure Monitor agent (Recommended)** is selected, and then click **Configure**.  
@@ -204,16 +193,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **CloudeyeVM1 \| Metrics** blade, on the default chart, note that at this point, the **Metrics Namespace** drop-down list, in addition to the **Virtual Machine Host** entry includes also the **Guest (classic)** entry.
 
-
-   ![GuestClassic-VM-Filter](https://github.com/Saurabh-Bhargav/Project/assets/143943258/9edc4319-17b7-47ad-bd0c-0345f87addb6)
-
+![GuestClassic-VM-Filter](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/GuestClassic-VM-Filter.png)
+  
 
     >**Note**: This is expected, since you enabled guest-level diagnostic settings. You also have the option to **Enable new guest memory metrics**.
 
 1. In the **Metrics Namespace** drop-down list, select  the **Guest (classic)** entry.
 
-
-   ![GuestClassic-VM-Filter](https://github.com/Saurabh-Bhargav/Project/assets/143943258/fb888a2f-4499-4114-88d4-dd1a2bb2e1f8)
 
 
 1. In the **Metric** drop-down list, review the list of available metrics.
@@ -233,8 +219,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
 
-   
-![Screenshot 2023-11-08 101048](https://github.com/Saurabh-Bhargav/Project/assets/143943258/8d35fac4-a6b2-4ada-941c-c672283a311e)
+   ![Screenshot 2023-11-08 101048](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Screenshot%202023-11-08%20101048.png)
 
 
 1. On the **Monitor \| Metrics** blade, on the **Avg Percentage CPU for CloudeyeVM1** pane, click **New alert rule**.
@@ -275,8 +260,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Review + create** tab of the **Create action group** blade, select **Create**.
 
-   
-![Create-action-group](https://github.com/Saurabh-Bhargav/Project/assets/143943258/532fbeb9-9549-4ebc-b32a-cdf80dbe5654)
+   ![Create-action-group](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Create-action-group.png)
 
 
 1. Back on the **Create alert rule** blade, click **Next: Details >**, and in the **Alert rule details** section, specify the following settings (leave others with their default values):
@@ -292,8 +276,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Click **Review + create** and on the **Review + create** tab click **Create**.
 
-
-   ![Create-alert-rule](https://github.com/Saurabh-Bhargav/Project/assets/143943258/20b3f8d4-8847-4d96-ac8a-fef525b9e86a)
+![Create-alert-rule](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Create-alert-rule.png)
 
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
@@ -315,8 +298,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    ```sh
    for /l %a in (0,0,1) do echo a
    ```
-
-![RDP-VM-CMD-COmmand](https://github.com/Saurabh-Bhargav/Project/assets/143943258/b37a52bd-c357-406c-a0b3-e6dc08f9bdfa)
+![RDP-VM-CMD-COmmand](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/RDP-VM-CMD-COmmand.png)
 
 
     >**Note**: This will initiate the infinite loop that should increase the CPU utilization above the threshold of the newly created alert rule.
@@ -325,8 +307,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the Azure portal, navigate back to the **Monitor** blade and click **Alerts**.
 
-
-   ![Monitor-Alert-Fired](https://github.com/Saurabh-Bhargav/Project/assets/143943258/b2241f8d-5372-4f39-9f50-25d7a8e02667)
+   
+![Monitor-Alert-Fired](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Monitor-Alert-Fired.png)
 
 
 1. Note the number of **Sev 3** alerts and then click the **Sev 3** row.
@@ -361,7 +343,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 Here is a screenshot showing the logs saved in the storage account:
 
-![image](https://github.com/Saurabh-Bhargav/Project/assets/143943258/c8179b59-7524-45dd-a9e3-65ea5c9c6d9c)
+![Screenshot202023-11-0820152523](https://github.com/Saurabh-Bhargav/Project/blob/main/Azure/AzureMonitoring/Images/Screenshot%202023-11-08%20152523.png)
 
 
 
