@@ -1,10 +1,7 @@
-## CloudEye: A Clear View into Azure Monitoring
+# CloudEye: A Clear View into Azure Monitoring
 
-## Overview
-
-# Project Scenario: Azure Monitoring and Log Analytics Lab
+## Project Scenario: Azure Monitoring and Log Analytics Lab
 The project aimed to assess Azure's capabilities for gaining insights into the performance and configuration of Azure resources, with a specific focus on Azure virtual machines. The primary objective was to explore and evaluate the features offered by Azure Monitor, including Log Analytics, to enhance resource monitoring and management.
-
 
 ## Objectives
 
