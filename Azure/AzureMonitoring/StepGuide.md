@@ -80,7 +80,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **lab1** |
+    | Resource group | the name of a new resource group **Cloudeye** |
     | Log Analytics Workspace | any unique name |
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
 
@@ -96,7 +96,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | --- | --- |
     | Automation account name | any unique name |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **lab1** |
+    | Resource group | **Cloudeye** |
     | Region | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
@@ -121,11 +121,11 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
 In this task, you will review default monitoring settings of Azure virtual machines
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **lab1-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **CloudeyeVM1**.
 
-1. On the **lab1-vm0** blade, in the **Monitoring** section, click **Metrics**.
+1. On the **CloudeyeVM1** blade, in the **Monitoring** section, click **Metrics**.
 
-1. On the **lab1-vm0 \| Metrics** blade, on the default chart, note that the only available **Metrics Namespace** is **Virtual Machine Host**.
+1. On the **CloudeyeVM1 \| Metrics** blade, on the default chart, note that the only available **Metrics Namespace** is **Virtual Machine Host**.
 
     >**Note**: This is expected, since no guest-level diagnostic settings have been configured yet. You do have, however, the option of enabling guest memory metrics directly from the **Metrics Namespace** drop down-list. You will enable it later in this exercise.
 
@@ -139,29 +139,29 @@ In this task, you will review default monitoring settings of Azure virtual machi
 
 In this task, you will configure Azure virtual machine diagnostic settings.
 
-1. On the **lab1-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
+1. On the **cloudeyeVM1** blade, in the **Monitoring** section, click **Diagnostic settings**.
 
-1. On the **Overview** tab of the **lab1-vm0 \| Diagnostic settings** blade, select a **Diagnostic storage account**, and then click **Enable guest-level monitoring**.
+1. On the **Overview** tab of the **cloudeyeVM1 \| Diagnostic settings** blade, select a **Diagnostic storage account**, and then click **Enable guest-level monitoring**.
 
     >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
 
-1. Switch to the **Performance counters** tab of the **lab1-vm0 \| Diagnostic settings** blade and review the available counters.
+1. Switch to the **Performance counters** tab of the **CloudeyeVM1 \| Diagnostic settings** blade and review the available counters.
 
     >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom** view for more detailed listing.
 
-1. Switch to the **Logs** tab of the **lab1-vm0 \| Diagnostic settings** blade and review the available event log collection options.
+1. Switch to the **Logs** tab of the **CloudeyeVM1 \| Diagnostic settings** blade and review the available event log collection options.
 
     >**Note**: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. Here as well you can switch to the **Custom** view for more detailed configuration settings.
 
-1. On the **lab1-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
+1. On the **CloudeyeVM1** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
 
-1. On the **lab1-vm0 - Logs** blade, ensure **Azure Monitor agent (Recommended)** is selected, and then click **Configure**.  
+1. On the **ClludeyeVM1 - Logs** blade, ensure **Azure Monitor agent (Recommended)** is selected, and then click **Configure**.  
 
     >**Note**: Do not wait for the operation to be completed, but instead proceed to the next step. The operation might take about 5 minutes.
 
-1. On the **lab1-vm0 \| Logs** blade, in the **Monitoring** section, click **Metrics**.
+1. On the **CloudeyeVM1 \| Logs** blade, in the **Monitoring** section, click **Metrics**.
 
-1. On the **lab1-vm0 \| Metrics** blade, on the default chart, note that at this point, the **Metrics Namespace** drop-down list, in addition to the **Virtual Machine Host** entry includes also the **Guest (classic)** entry.
+1. On the **CloudeyeVM1 \| Metrics** blade, on the default chart, note that at this point, the **Metrics Namespace** drop-down list, in addition to the **Virtual Machine Host** entry includes also the **Guest (classic)** entry.
 
     >**Note**: This is expected, since you enabled guest-level diagnostic settings. You also have the option to **Enable new guest memory metrics**.
 
@@ -177,13 +177,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the Azure portal, search for and select **Monitor** and, on the **Monitor \| Overview** blade, click **Metrics**.
 
-1. On the **Select a scope** blade, on the **Browse** tab, navigate to the **lab1-rg0** resource group, expand it, select the checkbox next to the **az104-11-vm0** virtual machine entry within that resource group, and click **Apply**.
+1. On the **Select a scope** blade, on the **Browse** tab, navigate to the **cloudeye** resource group, expand it, select the checkbox next to the **cloudeyeVM1** virtual machine entry within that resource group, and click **Apply**.
 
-    >**Note**: This gives you the same view and options as those available from the **lab1-vm0 - Metrics** blade.
+    >**Note**: This gives you the same view and options as those available from the **cloudeyeVM1 - Metrics** blade.
 
 1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
 
-1. On the **Monitor \| Metrics** blade, on the **Avg Percentage CPU for lab1-vm0** pane, click **New alert rule**.
+1. On the **Monitor \| Metrics** blade, on the **Avg Percentage CPU for CloudeyeVM1** pane, click **New alert rule**.
 
     >**Note**: Creating an alert rule from Metrics is not supported for metrics from the Guest (classic) metric namespace. This can be accomplished by using Azure Resource Manager templates, as described in the document [Send Guest OS metrics to the Azure Monitor metric store using a Resource Manager template for a Windows virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
 
@@ -207,9 +207,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **lab1** |
-    | Action group name | **lab-ag1** |
-    | Display name | **lab-ag1** |
+    | Resource group | **cloudeye** |
+    | Action group name | **cloudeyeact** |
+    | Display name | **cloudeyeact** |
 
 1. On the **Notifications** tab of the **Create an action group** blade, in the **Notification type** drop-down list, select **Email/SMS message/Push/Voice**. In the **Name** text box, type **admin email**. Click the **Edit details** (pencil) icon.
 
@@ -232,9 +232,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **lab1-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **cloudeyeVM1**.
 
-1. On the **lab1-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **cloudeyeVM1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
@@ -244,7 +244,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
 
-1. From the Command Prompt, run the following to trigger increased CPU utilization on the **lab1-vm0** Azure VM:
+1. From the Command Prompt, run the following to trigger increased CPU utilization on the **cloudeyeVM1** Azure VM:
 
    ```sh
    for /l %a in (0,0,1) do echo a
@@ -268,7 +268,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
 
-1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **lab1-vm0**, and click **Apply**.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **cloudeyeVM1**, and click **Apply**.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
@@ -285,39 +285,10 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors directly from the instructions, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
 
 
-1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile and double-click it to fill the query window, click the **Run** command button in the tile, and review the results.
-
-1. On the **New Query 1** tab, select the **Tables** header, and review the list of tables in the **Virtual machines** section.
-
-    >**Note**: The names of several tables correspond to the solutions you installed earlier in this lab.
-
-1. Hover the mouse over the **VMComputer** entry and click the **See Preview data** icon.
-
-1. If any data is available, in the **Update** pane, click **Use in editor**.
-
-    >**Note**: You might need to wait a few minutes before the update data becomes available.
-
 ## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'lab1*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'lab1*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 ## Review
 
