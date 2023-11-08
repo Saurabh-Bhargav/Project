@@ -18,6 +18,8 @@ In this lab, you will:
 ## Architecture diagram
 
 
+![Screenshot 2023-11-08 152254](https://github.com/Saurabh-Bhargav/Project/assets/143943258/79c4a36b-fbde-4f81-bf3d-c98e1e3db451)
+
 
 ### Instructions
 
@@ -356,6 +358,12 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    ```
 
     > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors directly from the instructions, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
+
+### Logs in Storage Account
+
+Here is a screenshot showing the logs saved in the storage account:
+
+!
 
 
 ## Clean up resources
