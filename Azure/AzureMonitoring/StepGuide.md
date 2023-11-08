@@ -1,4 +1,4 @@
-![Create-log-analysius-workspace](https://github.com/Saurabh-Bhargav/Project/assets/143943258/119b5567-2d43-467f-9e94-dde5c7ae48f8)# CloudEye: A Clear View into Azure Monitoring
+## CloudEye: A Clear View into Azure Monitoring
 
 ## Overview
 
