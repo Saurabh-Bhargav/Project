@@ -13,7 +13,7 @@ In this lab, you will:
 + Task 4: Review default monitoring settings of Azure virtual machines
 + Task 5: Configure Azure virtual machine diagnostic settings
 + Task 6: Review Azure Monitor functionality
-+ Task 7: Review Azure Log Analytics functionality
++ Task 7: Review Azure Log in storagea account
 
 ## Architecture diagram
 
@@ -337,7 +337,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **All Alerts** blade, review generated alerts.
 
-## Task 7: Review Azure Log Analytics functionality
+## Task 7: Review Azure Log in Storage account
 
 1. In the Azure portal, navigate back to the **Monitor** blade, click **Logs**.
 
